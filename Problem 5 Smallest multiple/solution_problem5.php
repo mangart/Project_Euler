@@ -1,5 +1,5 @@
 <?php
-
+$start = microtime(true);
 $primes = array(2,3,5,7,11,13,17,19);
 $largestPrimes = array();
 foreach($primes as $prime){
@@ -25,6 +25,6 @@ foreach($largestPrimes as $key => $prime){
 	$product = $product * pow($key,$prime);
 }
 echo "The smallest number that can be devided by all numbers from 1 to 20 without remainder is: ".$product."\n";
-
+echo ($time_elapsed_secs = microtime(true) - $start)."\n";
 
 ?>

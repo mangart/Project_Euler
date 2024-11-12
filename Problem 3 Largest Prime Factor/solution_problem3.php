@@ -1,5 +1,5 @@
 <?php
-
+$start = microtime(true);
 function is_prime($number){
 	for($i = 2;$i < floor(sqrt($number)+1);$i++){
 		if($number % $i == 0){
@@ -28,7 +28,7 @@ function largest_prime_factor($number){
 
 $number = 600851475143;
 echo "The solution is: ".largest_prime_factor($number)."\n";
-
+echo ($time_elapsed_secs = microtime(true) - $start)."\n";
 
 
 
