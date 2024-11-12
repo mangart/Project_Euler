@@ -1,4 +1,5 @@
 <?php
+$start = microtime(true);
 function is_prime($number){
 	for($i = 2;$i < floor(sqrt($number)+1);$i++){
 		if($number % $i == 0){
@@ -21,7 +22,7 @@ function thPrime($number){
 
 $number = 10001;
 echo "Number $number prime number is: ".thPrime($number)."\n";
-
+echo ($time_elapsed_secs = microtime(true) - $start)."\n";
 
 
 
